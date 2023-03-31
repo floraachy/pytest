@@ -1,0 +1,38 @@
+version: 2
+name: 推送代码-组合条件2
+description: ""
+global:
+  concurrent: false
+trigger:
+  webhook: gitlink@1.0.0
+  event:
+    - ref: push
+      ruleset:
+        - param-ref: branch
+          operator: EQ
+          value: '"master"'
+        - param-ref: last_commit_message
+          operator: EXCLUDE
+          value: '"hello"'
+      ruleset-operator: OR
+workflow:
+  - ref: start
+    name: 开始
+    task: start
+  - ref: dingtalk_notice_action_card_0
+    name: 钉钉通知-ActionCard
+    task: dingtalk_notice_action_card@1.0.2
+    input:
+      boot_webhook_url: ((dingding.dingding_webhook))
+      msg_title: '""'
+      msg_text: '"分支=master，最后提交信息不包含hello，满足以上任一规则"'
+      single_title: '""'
+      single_url: '""'
+      btns: '"[]"'
+    needs:
+      - start
+  - ref: end
+    name: 结束
+    task: end
+    needs:
+      - dingtalk_notice_action_card_0
