@@ -1,19 +1,4 @@
-============================
-Contribution getting started
-============================
 
-Contributions are highly welcomed and appreciated.  Every little bit of help counts,
-so do not hesitate!
-
-.. contents::
-   :depth: 2
-   :backlinks: none
-
-
-.. _submitfeedback:
-
-Feature requests and feedback
------------------------------
 
 Do you like pytest?  Share some love on Twitter or in your blog posts!
 
