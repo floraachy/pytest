@@ -1,4 +1,4 @@
-# Comments
+# Comments# Comments
 
 Every package should have a package comment. It should immediately precede the ` package ` statement in one of the files in the package. (It only needs to appear in one file.) It should begin with a single sentence that begins "Package _packagename_" and give a concise summary of the package functionality. This introductory sentence will be used in godoc's list of all packages.
 
