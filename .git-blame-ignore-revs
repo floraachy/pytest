@@ -1,19 +1,4 @@
-# List of revisions that can be ignored with git-blame(1).
-#
-# See `blame.ignoreRevsFile` in git-config(1) to enable it by default, or
-# use it with `--ignore-revs-file` manually with git-blame.
-#
-# To "install" it:
-#
-#   git config --local blame.ignoreRevsFile .gitblameignore
 
-# run black
-703e4b11ba76171eccd3f13e723c47b810ded7ef
-# switched to src layout
-eaa882f3d5340956beb176aa1753e07e3f3f2190
-# pre-commit run pyupgrade --all-files
-a91fe1feddbded535a4322ab854429e3a3961fb4
-# move node base classes from main to nodes
 afc607cfd81458d4e4f3b1f3cf8cc931b933907e
 # [?] split most fixture related code into own plugin
 8c49561470708761f7321504f5e8343811be87ac
